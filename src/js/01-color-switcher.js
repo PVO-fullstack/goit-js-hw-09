@@ -10,15 +10,16 @@ stopButton.addEventListener('click', onStopBtnClick);
 const timerId = setInterval(() => changeBodyColor(getRandomHexColor()), 1000);
 
 function onStartBtnClick() {
+  timerId = setInterval(() => changeBodyColor(getRandomHexColor()), 1000);
   startButton.disabled = true;
   stopButton.disabled = false;
   timerId();
 }
 
 function onStopBtnClick() {
+  clearInterval(timerId);
   stopButton.disabled = true;
   startButton.disabled = false;
-  clearInterval(timerId);
 }
 
 function changeBodyColor(color) {
