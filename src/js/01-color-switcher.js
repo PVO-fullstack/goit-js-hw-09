@@ -7,16 +7,12 @@ stopButton.disabled = true;
 startButton.addEventListener('click', onStartBtnClick);
 stopButton.addEventListener('click', onStopBtnClick);
 
-let timerId;
-
-
-// onInterval();
+let timerId = null;
 
 function onStartBtnClick() {
   startButton.disabled = true;
   stopButton.disabled = false;
   timerId = setInterval(() => changeBodyColor(getRandomHexColor()), 1000);
-
 }
 
 function onStopBtnClick() {
