@@ -59,6 +59,7 @@ function readStepValue(event) {
 function onClick(event) {
   event.preventDefault();
   createPromises();
+  promiseForm.reset();
 }
 
 
